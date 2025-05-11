@@ -1,6 +1,6 @@
 # Genome Assembly Project
 
-This repository contains implementations of de novo genome assembly algorithms and analysis of assembly results for both model datasets and the *Scincus mitranus* genome.
+This repository contains implementations of genome assembly algorithms and analysis of assembly results for both model datasets and the *Scincus mitranus* genome.
 
 ## Project Overview
 
@@ -13,6 +13,7 @@ This project consists of two main tasks:
 
 ```
 .
+├── README.md                   # Project documentation
 ├── assembly_runner.py          # Assembly execution wrapper
 ├── dbg_assembler.py            # De Bruijn Graph assembler implementation
 ├── make_gfa.py                 # GFA format generator for visualizations
@@ -21,45 +22,59 @@ This project consists of two main tasks:
 ├── data/                       # Data directory
 │   └── task1/                  # Task 1 simulated datasets
 │       ├── synthetic_1/        # Read and reference files for synthetic dataset 1
+│       │   ├── reads_*.fastq   # Raw sequencing reads
+│       │   └── reference_*.fasta # Reference sequences
 │       └── synthetic_2/        # Read and reference files for synthetic dataset 2
-├── docs/                       # Documentation
+│           ├── GCF_000901155.1_ViralProj183710_genomic.fna # Reference genome
+│           ├── no_error_*.fastq # Error-free simulated reads 
+│           └── *_hq_*.fastq    # Reads with simulated errors
 ├── evaluations/                # Evaluation results
 │   ├── mers/                   # Mer-based evaluations
 │   │   ├── dbg/                # DBG assembly evaluations
+│   │   │   ├── dbg_*_no_error/ # Error-free dataset evaluations
+│   │   │   ├── dbg_*_with_error/ # Error-containing dataset evaluations
+│   │   │   └── spades_*/       # SPAdes comparisons
 │   │   └── olc/                # OLC assembly evaluations
 │   └── synthetic_1/            # Evaluations on synthetic dataset 1
 │       └── dbg/                # DBG assembly evaluations and comparisons
+│           ├── comparison.*    # K-mer size comparison files
+│           ├── k_35/           # K=35 assembly results
+│           └── k_45/           # K=45 assembly results
 ├── results/                    # Output results directory
 │   ├── task1/                  # Task 1 results
 │   │   └── spades/             # SPAdes assembly results
 │   └── task2/                  # Task 2 results
 │       ├── assembly/           # Assembled genomes
+│       │   ├── scincus_mitranus.bp.p_ctg.fasta           # PacBio-only assembly
+│       │   ├── scincus_mitranus_nanopore.bp.p_ctg.fasta  # PacBio+Nanopore assembly
+│       │   ├── scincus_mitranus_hic.hic.p_ctg.fasta      # PacBio+Hi-C assembly
+│       │   └── scincus_mitranus_full.hic.p_ctg.fasta     # Integrated assembly
 │       ├── evaluation/         # Quality assessment
+│       │   ├── busco/          # Completeness assessment
+│       │   ├── merqury/        # K-mer based quality evaluation
+│       │   └── quast/          # Assembly statistics
 │       ├── improvement/        # Improved assemblies
+│       │   ├── correction_logs/  # Read correction logs
+│       │   └── improved_assembly.fasta  # Final improved assembly
 │       └── reports/            # Analysis reports
+│           └── *.txt           # Various summary and analysis files
 ├── scripts/                    # Helper scripts
 │   └── utility/                # Utility scripts
-│       └── extract_standard_kraken_db.sh  # Kraken DB extraction
 ├── task2/                      # Task 2 scripts
 │   ├── final_task2_2.sh        # Task 2.2 assembly script
 │   ├── process_all_datasets.sh # Process and assemble datasets for Task 1
 │   └── task2_3_assembly_improvement_subsampled.sh # Assembly improvement pipeline
 └── visualizations/             # Visualizations and figures
-    ├── bandage_1_3_1.png       # Bandage visualization for task 1.3.1
-    ├── k35_assembly_graph.png  # Assembly graph with k=35
-    ├── k45_assembly_graph.png  # Assembly graph with k=45
+    ├── *.png                   # Assembly graph visualizations
     ├── task1/                  # Task 1 visualizations
     │   ├── busco/              # BUSCO visualization
     │   ├── merqury/            # Merqury quality assessment
     │   ├── mis_assembly/       # Misassembly analysis
     │   ├── plots/              # Various summary plots
+    │   │   └── *.pdf           # Plot files (quality, coverage, etc.)
     │   └── quast/              # QUAST results
     └── task2/                  # Task 2 visualizations
-        ├── busco/              # BUSCO visualization
-        ├── merqury/            # Merqury quality assessment
-        ├── mis_assembly/       # Misassembly analysis
-        ├── plots/              # Various summary plots
-        └── quast/              # QUAST results
+        └── */                  # Various visualization categories
 ```
 
 ## Requirements
@@ -76,7 +91,7 @@ This project consists of two main tasks:
 - Trimmomatic
 - Porechop
 
-## Task 1: De Novo Assembly Algorithms
+## Task 1: Assembly Algorithms
 
 ### Implementation
 
@@ -93,7 +108,11 @@ To run the assembly on all datasets for Task 1:
 ./task2/process_all_datasets.sh
 ```
 
-This script processes all error-free and error-containing datasets from Task 1 using both DBG and OLC assembly methods. Despite being located in the task2 directory, this script is used for running assemblies on the Task 1 datasets.
+This script is the primary workflow for Task 1, processing all error-free and error-containing datasets using both DBG and OLC assembly methods. It:
+- Runs the DBG assembler on HiSeq and ONT datasets (with and without errors)
+- Runs the OLC assembler on all datasets with varying overlap parameters
+- Executes comparative analysis against SPAdes assemblies
+- Generates evaluation metrics for all assemblies
 
 For a specific analysis of one dataset:
 
@@ -120,12 +139,25 @@ The impact of k-mer size on assembly quality can be explored in the `evaluations
 
 ### Assembly Strategies
 
-Four assembly strategies were evaluated:
+The *Scincus mitranus* genome was assembled using a multi-phase approach:
 
-1. PacBio-only assembly
-2. PacBio + Nanopore assembly
-3. PacBio + Hi-C assembly
-4. Full integrated assembly (combining all three data types)
+1. **Task 2.1: Initial Read Processing and Quality Control**
+   - Quality assessment of raw PacBio HiFi, Oxford Nanopore, and Hi-C reads
+   - Adapter removal and read filtering
+   - Contamination screening using Kraken2
+   - Read subsampling for optimal coverage depth
+
+2. **Task 2.2: Genome Assembly with Different Technologies**
+   Four assembly strategies were evaluated:
+   - PacBio-only assembly
+   - PacBio + Nanopore assembly
+   - PacBio + Hi-C assembly
+   - Full integrated assembly (combining all three data types)
+
+3. **Task 2.3: Assembly Improvement**
+   - Error correction for long reads
+   - Quality assessment and comparison of different assembly versions
+   - Final polishing and gap filling
 
 ### Running the Assembly
 
