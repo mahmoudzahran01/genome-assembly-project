@@ -1,0 +1,101 @@
+{
+  "kmers": {
+    "total": 330000,
+    "unique": 1000
+  },
+  "graph": {
+    "nodes": 1000,
+    "edges": 330000
+  },
+  "assembly": {
+    "num_contigs": 1,
+    "total_length": 1020,
+    "min_length": 1020,
+    "max_length": 1020,
+    "mean_length": 1020.0,
+    "n50": 1020,
+    "n90": 1020,
+    "gc_content": 51.37254901960784
+  },
+  "files": {
+    "contigs": "task1/evaluations/synthetic_1/k_35/contigs_k35.fasta",
+    "graph": "task1/evaluations/synthetic_1/k_35/assembly_graph_k35.gfa"
+  },
+  "alignment": {
+    "scores": [
+      1020.0
+    ],
+    "best_score": 1020.0,
+    "best_alignment": [
+      [
+        [
+          0,
+          140
+        ],
+        [
+          141,
+          142
+        ],
+        [
+          145,
+          146
+        ],
+        [
+          147,
+          148
+        ],
+        [
+          150,
+          151
+        ],
+        [
+          156,
+          157
+        ],
+        [
+          163,
+          164
+        ],
+        [
+          166,
+          1040
+        ]
+      ],
+      [
+        [
+          0,
+          140
+        ],
+        [
+          140,
+          141
+        ],
+        [
+          141,
+          142
+        ],
+        [
+          142,
+          143
+        ],
+        [
+          143,
+          144
+        ],
+        [
+          144,
+          145
+        ],
+        [
+          145,
+          146
+        ],
+        [
+          146,
+          1020
+        ]
+      ]
+    ],
+    "best_contig_idx": 0
+  }
+}

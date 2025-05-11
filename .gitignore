@@ -1,0 +1,40 @@
+# Ignore large data files
+*.fasta
+*.fastq
+*.sam
+*.bam
+*.gfa
+*.gz
+*.zip
+*.tar
+*.hdf5
+
+# Exception for reference genomes (small ones only)
+!reference_*.fasta
+!GCF_000901155.1_ViralProj183710_genomic.fna
+
+# Ignore large output directories but keep directory structure
+results/task2/assembly/*
+!results/task2/assembly/.gitkeep
+results/task2/evaluation/busco/*
+!results/task2/evaluation/busco/.gitkeep
+results/task2/evaluation/merqury/*
+!results/task2/evaluation/merqury/.gitkeep
+results/task2/evaluation/quast/*
+!results/task2/evaluation/quast/.gitkeep
+results/task2/improvement/*
+!results/task2/improvement/.gitkeep
+
+# Ignore large visualization files
+*.html
+visualizations/task1/plots/*.html
+visualizations/task2/plots/*.html
+visualizations/task2/quast/*.html
+
+# Ignore temporary/checkpoint files
+*-checkpoint.*
+*~
+.DS_Store
+__pycache__/
+*.py[cod]
+*$py.class

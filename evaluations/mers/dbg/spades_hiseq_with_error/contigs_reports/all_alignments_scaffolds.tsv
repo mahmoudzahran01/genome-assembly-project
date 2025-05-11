@@ -1,0 +1,3 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+18	29499	29482	1	NC_019843.3	NODE_1_length_29482_cov_5.566113	100.0		True
+CONTIG	NODE_1_length_29482_cov_5.566113	29482	correct

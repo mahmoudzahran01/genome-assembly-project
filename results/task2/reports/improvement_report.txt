@@ -1,0 +1,27 @@
+Scincus mitranus Assembly Improvement (Subsampled Data)
+=====================================================
+Date: Sat May 10 06:50:34 PM +03 2025
+Job ID: 38745988
+
+=== INPUT DATA ===
+- Hi-C subsamples: hic_r1_10p.fastq, hic_r2_10p.fastq
+- Nanopore subsample: nanopore_10p.fastq
+- PacBio subsamples: pacbio_seq_10p.fastq, pacbio_rev_10p.fastq
+
+=== KEY METRICS ===
+Metric              Original                                                                                        Improved
+Contigs             /ibex/scratch/zahrmm0b/genome_assembly/assembly/scincus_mitranus.bp.p_ctg.fasta:20859           0
+Assembly Size (bp)  /ibex/scratch/zahrmm0b/genome_assembly/assembly/scincus_mitranus_full.hic.p_ctg.fasta:11049     0
+N50                 /ibex/scratch/zahrmm0b/genome_assembly/assembly/scincus_mitranus_hic.hic.p_ctg.fasta:21229      
+QV Score            /ibex/scratch/zahrmm0b/genome_assembly/assembly/scincus_mitranus_nanopore.bp.p_ctg.fasta:11036  
+                    5406633052                                                                                      
+
+=== ERROR CORRECTION COMPARISON ===
+- Herro corrected: 
+- DeChat corrected: 0
+- Combined ONT reads: 0
+
+=== RECOMMENDATIONS ===
+1. For full data: Increase --mem to 192G and --time to 48:00:00
+2. To further improve QV: Try different k-mer sizes in Merqury
+3. For annotation: Use RNA-Seq data from /ibex/reference/course/cs249/lizard/annotation/

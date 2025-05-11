@@ -1,0 +1,107 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+392	618	1	227	NC_019843.3	contig_1	98.68		True
+CONTIG	contig_1	227	correct
+25233	25446	1	214	NC_019843.3	contig_2	99.07		True
+CONTIG	contig_2	214	correct
+16742	16973	1	232	NC_019843.3	contig_3	99.57		True
+CONTIG	contig_3	232	correct
+3643	3869	1	227	NC_019843.3	contig_4	99.12		True
+CONTIG	contig_4	227	correct
+21058	21278	1	221	NC_019843.3	contig_5	99.55		True
+CONTIG	contig_5	221	correct
+17542	17773	1	232	NC_019843.3	contig_6	99.14		True
+CONTIG	contig_6	232	correct
+398	618	1	221	NC_019843.3	contig_7	99.55		True
+CONTIG	contig_7	221	correct
+9191	9418	1	228	NC_019843.3	contig_8	99.56		True
+CONTIG	contig_8	228	correct
+15792	16023	1	232	NC_019843.3	contig_9	99.57		True
+CONTIG	contig_9	232	correct
+15416	15621	1	206	NC_019843.3	contig_10	99.51		True
+CONTIG	contig_10	206	correct
+19136	19364	1	229	NC_019843.3	contig_11	99.56		True
+CONTIG	contig_11	229	correct
+7892	8117	1	226	NC_019843.3	contig_12	99.56		True
+CONTIG	contig_12	232	correct
+8758	8988	1	231	NC_019843.3	contig_13	97.84		True
+CONTIG	contig_13	231	correct
+7539	7769	1	231	NC_019843.3	contig_14	99.57		True
+CONTIG	contig_14	231	correct
+9235	9456	1	222	NC_019843.3	contig_15	99.1		True
+CONTIG	contig_15	222	correct
+24093	24412	1	320	NC_019843.3	contig_16	98.75		True
+CONTIG	contig_16	323	correct
+4300	4524	1	225	NC_019843.3	contig_17	98.22		True
+CONTIG	contig_17	225	correct
+13776	14005	1	230	NC_019843.3	contig_18	99.57		True
+CONTIG	contig_18	230	correct
+6485	6711	1	227	NC_019843.3	contig_19	99.56		True
+CONTIG	contig_19	227	correct
+28520	28739	1	220	NC_019843.3	contig_20	99.55		True
+CONTIG	contig_20	220	correct
+6478	6657	1	180	NC_019843.3	contig_21	100.0		True
+CONTIG	contig_21	180	correct
+16503	16727	1	225	NC_019843.3	contig_22	99.56		True
+CONTIG	contig_22	225	correct
+22380	22598	1	219	NC_019843.3	contig_23	99.54		True
+CONTIG	contig_23	219	correct
+9627	9854	1	228	NC_019843.3	contig_24	99.56		True
+CONTIG	contig_24	228	correct
+21560	21791	1	232	NC_019843.3	contig_25	99.14		True
+CONTIG	contig_25	232	correct
+6723	6950	1	228	NC_019843.3	contig_26	99.56		True
+CONTIG	contig_26	228	correct
+8148	8376	1	229	NC_019843.3	contig_27	99.56		True
+CONTIG	contig_27	229	correct
+19961	20090	1	130	NC_019843.3	contig_28	100.0		True
+CONTIG	contig_28	130	correct
+29123	29336	1	214	NC_019843.3	contig_29	99.53		True
+CONTIG	contig_29	214	correct
+17466	17687	1	222	NC_019843.3	contig_30	99.55		True
+CONTIG	contig_30	222	correct
+462	685	1	224	NC_019843.3	contig_31	99.55		True
+CONTIG	contig_31	224	correct
+13852	14072	1	221	NC_019843.3	contig_32	99.1		True
+CONTIG	contig_32	221	correct
+9448	9677	1	230	NC_019843.3	contig_33	99.57		True
+CONTIG	contig_33	230	correct
+2570	2801	1	232	NC_019843.3	contig_34	99.57		True
+CONTIG	contig_34	232	correct
+13066	13293	1	228	NC_019843.3	contig_35	99.56		True
+CONTIG	contig_35	228	correct
+14114	14331	1	218	NC_019843.3	contig_36	99.08		True
+CONTIG	contig_36	218	correct
+29285	29499	1	215	NC_019843.3	contig_37	99.07		True
+CONTIG	contig_37	215	correct
+24242	24465	1	224	NC_019843.3	contig_38	99.11		True
+CONTIG	contig_38	224	correct
+13788	14017	1	230	NC_019843.3	contig_39	99.57		True
+CONTIG	contig_39	230	correct
+10094	10320	1	227	NC_019843.3	contig_40	99.12		True
+CONTIG	contig_40	227	correct
+16137	16364	1	228	NC_019843.3	contig_41	99.12		True
+CONTIG	contig_41	228	correct
+17032	17260	1	229	NC_019843.3	contig_42	99.56		True
+CONTIG	contig_42	229	correct
+5724	5955	1	232	NC_019843.3	contig_43	98.28		True
+CONTIG	contig_43	232	correct
+27366	27596	1	231	NC_019843.3	contig_44	98.27		True
+CONTIG	contig_44	231	correct
+26320	26523	1	204	NC_019843.3	contig_45	99.51		True
+CONTIG	contig_45	204	correct
+10336	10559	1	224	NC_019843.3	contig_46	98.66		True
+CONTIG	contig_46	224	correct
+3085	3313	1	229	NC_019843.3	contig_47	99.56		True
+CONTIG	contig_47	229	correct
+18056	18286	1	231	NC_019843.3	contig_48	99.57		True
+CONTIG	contig_48	231	correct
+1309	1521	1	213	NC_019843.3	contig_49	98.59		True
+CONTIG	contig_49	213	correct
+10583	10799	1	217	NC_019843.3	contig_50	99.54		True
+CONTIG	contig_50	217	correct
+507	737	1	231	NC_019843.3	contig_51	99.57		True
+CONTIG	contig_51	231	correct
+8203	8428	1	226	NC_019843.3	contig_52	99.12		True
+CONTIG	contig_52	226	correct
+29368	29499	1	132	NC_019843.3	contig_53	100.0		True
+CONTIG	contig_53	132	correct

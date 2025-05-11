@@ -1,0 +1,84 @@
+/ibex/sw/rl9c/quast/5.2.0/rl9_conda3/quast-5.2.0/quast.py -o task1/evaluations/mers/dbg_ont_with_error -r task1/data/synthetic_2/GCF_000901155.1_ViralProj183710_genomic.fna task1/outputs/mers_dbg/ont_with_error/contigs_k31.fasta
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-5.14.0-427.20.1.el9_4.0.1.x86_64-x86_64-with-glibc2.17 (linux_64)
+  Python version: 3.8.20
+  CPUs number: 40
+
+Started: 2025-05-09 18:15:06
+
+Logging to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/quast.log
+NOTICE: Maximum number of threads is set to 10 (use --threads option to set it manually)
+
+CWD: /home/zahrmm0b/cs249/cs249_final_assignment_2
+Main parameters: 
+  MODE: default, threads: 10, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Reference:
+  /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/data/synthetic_2/GCF_000901155.1_ViralProj183710_genomic.fna ==> GCF_000901155.1_ViralProj183710_genomic
+
+Contigs:
+  Pre-processing...
+  task1/outputs/mers_dbg/ont_with_error/contigs_k31.fasta ==> contigs_k31
+
+2025-05-09 18:15:07
+Running Basic statistics processor...
+  Reference genome:
+    GCF_000901155.1_ViralProj183710_genomic.fna, length = 30119, num fragments = 1, GC % = 41.24
+  Contig files: 
+    contigs_k31
+  Calculating N50 and L50...
+    contigs_k31, N50 = 22085, L50 = 1, auN = 18322.4, Total length = 30335, GC % = 40.94, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/basic_stats/GC_content_plot.pdf
+  Drawing contigs_k31 GC content plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/basic_stats/contigs_k31_GC_content_plot.pdf
+Done.
+
+2025-05-09 18:15:08
+Running Contig analyzer...
+  contigs_k31
+  Logging to files /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/contigs_reports/contigs_report_contigs_k31.stdout and contigs_report_contigs_k31.stderr...
+  Aligning contigs to the reference
+  /ibex/sw/rl9c/quast/5.2.0/rl9_conda3/quast-5.2.0/quast_libs/minimap2/minimap2 -c \
+  -x asm10 -B5 -O4,16 --no-long-join -r 200 -N 50 -s 65 -z 200 --mask-level 0.9 --min-occ \
+  200 -g 2500 --score-N 2 --cs -t 10 task1/evaluations/mers/dbg_ont_with_error/quast_corrected_input/GCF_000901155.1_ViralProj183710_genomic.fna \
+  task1/evaluations/mers/dbg_ont_with_error/quast_corrected_input/contigs_k31.fasta \
+  > task1/evaluations/mers/dbg_ont_with_error/contigs_reports/minimap_output/contigs_k31.coords_tmp \
+  2>> task1/evaluations/mers/dbg_ont_with_error/contigs_reports/contigs_report_contigs_k31.stderr
+  Analysis is finished.
+
+Failed aligning the contigs for all the assemblies. Only basic stats are going to be evaluated.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2025-05-09 18:15:08
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2025-05-09 18:15:09
+RESULTS:
+  Text versions of total report are saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/report.html
+  PDF version (tables and plots) is saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/report.pdf
+  Icarus (contig browser) is saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/icarus.html
+  Log is saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/dbg_ont_with_error/quast.log
+
+Finished: 2025-05-09 18:15:09
+Elapsed time: 0:00:02.593074
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

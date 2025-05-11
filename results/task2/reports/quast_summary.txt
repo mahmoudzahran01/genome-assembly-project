@@ -1,0 +1,35 @@
+QUAST Basic Assembly Metrics
+===========================
+Date: Sat May 10 05:48:08 AM +03 2025
+
+All statistics are based on contigs of size >= 1000 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    scincus_mitranus_nanopore.bp.p_ctg  scincus_mitranus.bp.p_ctg
+# contigs (>= 0 bp)         11036                               20859                    
+# contigs (>= 1000 bp)      11036                               20859                    
+# contigs (>= 5000 bp)      11036                               20859                    
+# contigs (>= 10000 bp)     11036                               20859                    
+# contigs (>= 25000 bp)     11025                               20552                    
+# contigs (>= 50000 bp)     10589                               13587                    
+Total length (>= 0 bp)      1145082774                          1549791663               
+Total length (>= 1000 bp)   1145082774                          1549791663               
+Total length (>= 5000 bp)   1145082774                          1549791663               
+Total length (>= 10000 bp)  1145082774                          1549791663               
+Total length (>= 25000 bp)  1144858490                          1542849485               
+Total length (>= 50000 bp)  1125893987                          1271383484               
+# contigs                   11036                               20859                    
+Largest contig              805554                              594987                   
+Total length                1145082774                          1549791663               
+Estimated reference length  1300000000                          1300000000               
+GC (%)                      45.15                               45.30                    
+N50                         108996                              85025                    
+NG50                        100402                              95468                    
+N90                         65621                               41598                    
+NG90                        -                                   56837                    
+auN                         129365.7                            101504.2                 
+auNG                        113949.6                            121008.0                 
+L50                         3569                                6026                     
+LG50                        4310                                4637                     
+L90                         8966                                16290                    
+LG90                        -                                   11686                    
+# N's per 100 kbp           0.00                                0.00                     

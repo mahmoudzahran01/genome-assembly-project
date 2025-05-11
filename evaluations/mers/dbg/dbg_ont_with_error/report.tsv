@@ -1,0 +1,32 @@
+Assembly	contigs_k31
+# contigs (>= 0 bp)	2
+# contigs (>= 1000 bp)	2
+# contigs (>= 5000 bp)	2
+# contigs (>= 10000 bp)	1
+# contigs (>= 25000 bp)	0
+# contigs (>= 50000 bp)	0
+Total length (>= 0 bp)	30335
+Total length (>= 1000 bp)	30335
+Total length (>= 5000 bp)	30335
+Total length (>= 10000 bp)	22085
+Total length (>= 25000 bp)	0
+Total length (>= 50000 bp)	0
+# contigs	2
+Largest contig	22085
+Total length	30335
+Reference length	30119
+GC (%)	40.94
+Reference GC (%)	41.24
+N50	22085
+NG50	22085
+N90	8250
+NG90	8250
+auN	18322.4
+auNG	18453.8
+L50	1
+LG50	1
+L90	2
+LG90	2
+# unaligned contigs	2 + 0 part
+Unaligned length	30335
+# N's per 100 kbp	0.00

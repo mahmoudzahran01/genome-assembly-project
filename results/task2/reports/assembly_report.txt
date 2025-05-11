@@ -1,0 +1,37 @@
+Scincus mitranus Genome Assembly (Task 2.1)
+===========================================
+Date: Sat May 10 06:44:06 AM +03 2025
+Job ID: 38742186
+Assembly method: Hifiasm
+Subsampling ratio: 10%
+
+Files used:
+- PacBio SEQ: /ibex/reference/course/cs249/lizard/input/ncbi_upload/lizard_liver_seq.fastq.gz (subsampled to 10%, 175106 reads)
+- PacBio REV: /ibex/reference/course/cs249/lizard/input/ncbi_upload/lizard_liver_rev.fastq.gz (subsampled to 10%, 367675 reads)
+- Nanopore: /ibex/reference/course/cs249/lizard/input/ncbi_upload/lizard_ont.fastq.gz (subsampled to 10%, 225302 reads)
+- Hi-C R1: /ibex/reference/course/cs249/lizard/input/ncbi_upload/lizard_hic_R1.fastq.gz (subsampled to 10%, 49707371 reads)
+- Hi-C R2: /ibex/reference/course/cs249/lizard/input/ncbi_upload/lizard_hic_R2.fastq.gz (subsampled to 10%, 49707371 reads)
+
+Original Assembly Statistics:
+- File: /ibex/scratch/zahrmm0b/genome_assembly/assembly/scincus_mitranus.bp.p_ctg.gfa
+- FASTA: /ibex/scratch/zahrmm0b/genome_assembly/assembly/scincus_mitranus.bp.p_ctg.fasta
+- Number of contigs: 20859
+- Total assembly size: 1549812522 bp
+
+Nanopore-assisted Assembly:
+- File: /ibex/scratch/zahrmm0b/genome_assembly/assembly/scincus_mitranus_nanopore.bp.p_ctg.gfa
+- FASTA: /ibex/scratch/zahrmm0b/genome_assembly/assembly/scincus_mitranus_nanopore.bp.p_ctg.fasta
+- Number of contigs: 11036
+- Total assembly size: 1145093810 bp
+
+Hi-C-assisted Assembly:
+- File: /ibex/scratch/zahrmm0b/genome_assembly/assembly/scincus_mitranus_hic.hic.p_ctg.gfa
+- FASTA: /ibex/scratch/zahrmm0b/genome_assembly/assembly/scincus_mitranus_hic.hic.p_ctg.fasta
+- Number of contigs: 21229
+- Total assembly size: 1560641009 bp
+
+Full Integrated Assembly:
+- File: /ibex/scratch/zahrmm0b/genome_assembly/assembly/scincus_mitranus_full.hic.p_ctg.gfa
+- FASTA: /ibex/scratch/zahrmm0b/genome_assembly/assembly/scincus_mitranus_full.hic.p_ctg.fasta
+- Number of contigs: 11049
+- Total assembly size: 1145680108 bp

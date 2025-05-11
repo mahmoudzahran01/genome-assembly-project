@@ -1,0 +1,14 @@
+reference chromosomes:
+	NC_019843.3 (total length: 30119 bp, total length without N's: 30119 bp, maximal covered length: 29482 bp)
+
+total genome size: 30119
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+========================================================================================================================
+contigs_k31              | 97.885    | 1.000       | 1         | -         | -         | -         | -         |

@@ -1,0 +1,7 @@
+Merqury K-mer Analysis and QV Score
+==================================
+Date: Sat May 10 05:54:31 AM +03 2025
+Assembly: scincus_mitranus_hic.hic.p_ctg.fasta
+
+QV Scores:
+scincus_mitranus_hic.hic.p_ctg	867704	1560195200	45.7691	2.64904e-05

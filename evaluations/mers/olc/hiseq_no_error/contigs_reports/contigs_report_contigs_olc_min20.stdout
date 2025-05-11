@@ -1,0 +1,51 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [NC_019843.3]
+	Total Regions: 1
+	Total Region Length: 30119
+Analyzing contigs...
+CONTIG: contig_1 (178bp)
+Best alignment score: 178.0 (LEN: 178, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 19965 20142 | 1 178 | 178 178 | 100.0 | NC_019843.3 contig_1
+
+CONTIG: contig_2 (132bp)
+Best alignment score: 132.0 (LEN: 132, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 29368 29499 | 1 132 | 132 132 | 100.0 | NC_019843.3 contig_2
+
+Analyzing coverage...
+Writing SNPs into /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers_olc_hiseq_no_error/contigs_reports/minimap_output/contigs_olc_min20.used_snps
+
+Analysis is finished!
+Founded SNPs were written into /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers_olc_hiseq_no_error/contigs_reports/minimap_output/contigs_olc_min20.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap ("Extra" Aligned Bases): 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Bases in Fully and Partially Unaligned Contigs: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+"Extra" Aligned Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used (there is no "extra" aligned bases).
+
+	Covered Bases in Reference: 310
+	Raw Aligned Bases in Assembly: 310
+	Total Aligned Bases in Assembly (with "Extras"): 310
+
+	SNPs: 0
+	Insertions: 0
+	Deletions: 0
+

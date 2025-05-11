@@ -1,0 +1,55 @@
+Assembly	contigs_k35
+# contigs (>= 0 bp)	1
+# contigs (>= 1000 bp)	1
+# contigs (>= 5000 bp)	0
+# contigs (>= 10000 bp)	0
+# contigs (>= 25000 bp)	0
+# contigs (>= 50000 bp)	0
+Total length (>= 0 bp)	1020
+Total length (>= 1000 bp)	1020
+Total length (>= 5000 bp)	0
+Total length (>= 10000 bp)	0
+Total length (>= 25000 bp)	0
+Total length (>= 50000 bp)	0
+# contigs	1
+Largest contig	1020
+Total length	1020
+Reference length	1040
+GC (%)	51.37
+Reference GC (%)	51.25
+N50	1020
+NG50	1020
+N90	1020
+NG90	1020
+auN	1020.0
+auNG	1000.4
+L50	1
+LG50	1
+L90	1
+LG90	1
+# misassemblies	0
+# misassembled contigs	0
+Misassembled contigs length	0
+# local misassemblies	0
+# scaffold gap ext. mis.	0
+# scaffold gap loc. mis.	0
+# unaligned mis. contigs	0
+# unaligned contigs	0 + 0 part
+Unaligned length	0
+Genome fraction (%)	100.000
+Duplication ratio	0.981
+# N's per 100 kbp	0.00
+# mismatches per 100 kbp	0.00
+# indels per 100 kbp	98.04
+Largest alignment	1020
+Total aligned length	1020
+NA50	1020
+NGA50	1020
+NA90	1020
+NGA90	1020
+auNA	1020.0
+auNGA	1000.4
+LA50	1
+LGA50	1
+LA90	1
+LGA90	1

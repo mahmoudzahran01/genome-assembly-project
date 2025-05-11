@@ -1,0 +1,114 @@
+/ibex/sw/rl9c/quast/5.2.0/rl9_conda3/quast-5.2.0/quast.py -o task1/evaluations/mers/spades_hiseq_with_error -r task1/data/synthetic_2/GCF_000901155.1_ViralProj183710_genomic.fna task1/outputs/mers_spades/hiseq_with_error/scaffolds.fasta
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-5.14.0-427.20.1.el9_4.0.1.x86_64-x86_64-with-glibc2.17 (linux_64)
+  Python version: 3.8.20
+  CPUs number: 40
+
+Started: 2025-05-09 18:35:14
+
+Logging to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/quast.log
+NOTICE: Output directory already exists and looks like a QUAST output dir. Existing results can be reused (e.g. previously generated alignments)!
+NOTICE: Maximum number of threads is set to 10 (use --threads option to set it manually)
+
+CWD: /home/zahrmm0b/cs249/cs249_final_assignment_2
+Main parameters: 
+  MODE: default, threads: 10, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Reference:
+  /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/data/synthetic_2/GCF_000901155.1_ViralProj183710_genomic.fna ==> GCF_000901155.1_ViralProj183710_genomic
+
+Contigs:
+  Pre-processing...
+  task1/outputs/mers_spades/hiseq_with_error/scaffolds.fasta ==> scaffolds
+
+2025-05-09 18:35:15
+Running Basic statistics processor...
+  Reference genome:
+    GCF_000901155.1_ViralProj183710_genomic.fna, length = 30119, num fragments = 1, GC % = 41.24
+  Contig files: 
+    scaffolds
+  Calculating N50 and L50...
+    scaffolds, N50 = 29482, L50 = 1, auN = 29482.0, Total length = 29482, GC % = 41.26, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/basic_stats/GC_content_plot.pdf
+  Drawing scaffolds GC content plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/basic_stats/scaffolds_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/basic_stats/coverage_histogram.pdf
+  Drawing scaffolds coverage histogram (bin size: 1x)...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/basic_stats/scaffolds_coverage_histogram.pdf
+Done.
+
+2025-05-09 18:35:17
+Running Contig analyzer...
+  scaffolds
+  Logging to files /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/contigs_reports/contigs_report_scaffolds.stdout and contigs_report_scaffolds.stderr...
+  Using existing alignments... 
+  Analysis is finished.
+
+  Creating total report...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2025-05-09 18:35:18
+Running NA-NGA calculation...
+  scaffolds, Largest alignment = 29482, NA50 = 29482, NGA50 = 29482, LA50 = 1, LGA50 = 1
+  Drawing cumulative plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/aligned_stats/NGAx_plot.pdf
+Done.
+
+2025-05-09 18:35:18
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  scaffolds
+  Analysis is finished.
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2025-05-09 18:35:18
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2025-05-09 18:35:19
+RESULTS:
+  Text versions of total report are saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/report.html
+  PDF version (tables and plots) is saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/report.pdf
+  Icarus (contig browser) is saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/icarus.html
+  Log is saved to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers/spades_hiseq_with_error/quast.log
+
+Finished: 2025-05-09 18:35:19
+Elapsed time: 0:00:05.142003
+NOTICEs: 5; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

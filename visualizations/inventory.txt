@@ -1,0 +1,17 @@
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/bandage_viz.png
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/inventory.txt
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/contigs_k31_GC_content_plot.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/coverage_histogram.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/cumulative_plot.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/GC_content_plot.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/misassemblies_frcurve_plot.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/misassemblies_plot.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/NAx_plot.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/NGAx_plot.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/NGx_plot.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/Nx_plot.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/report-checkpoint.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/report.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/scaffolds_coverage_histogram.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task1/plots/scaffolds_GC_content_plot.pdf
+/ibex/scratch/zahrmm0b/cs249_final_assignment2/visualizations/task2/quast/contig_size_viewer.html

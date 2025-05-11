@@ -1,0 +1,32 @@
+Analysis Notes for Scincus mitranus Genome Assembly
+==================================================
+
+The following analyses were completed successfully:
+- Assembly generation with PacBio data (Task 2.1)
+- Assembly generation with PacBio + Nanopore data (Task 2.1)
+- Assembly generation with PacBio + Hi-C data (Task 2.1)
+- Assembly generation with all data types integrated (Task 2.1)
+- QUAST evaluation of assemblies (Task 2.2)
+- Merqury QV score calculation for Hi-C assembly (Task 2.2)
+
+The following analyses had issues but are included for the bonus question:
+- BUSCO gene completeness assessment (Task 2.2) - Did not complete successfully
+- Mis-assembly detection with read mapping (Task 2.2) - No alignments generated
+- Assembly improvement with error correction (Task 2.3) - Error correction had issues
+
+BUSCO EXECUTION ISSUES:
+Despite multiple attempts, BUSCO processes consistently terminated after approximately one hour into the run due to severe memory constraints. The large lizard genome (~1.5Gb) required significantly more memory than was available, leading to processes being killed by the system. The log files show that BUSCO started successfully but could not complete the gene searches.
+
+BONUS QUESTION ANALYSIS (Task 2.3):
+The assembly improvement pipeline encountered several issues:
+1. The error correction tools (Herro and DeChat) appear to have failed
+2. The improved assembly file exists but is empty (0 bytes)
+3. The improvement report shows problems with the error correction metrics
+
+The 10% subsampling of the original data had a profound negative impact on the quality of our results for Task 2.3. This limited sampling:
+- Significantly reduced the coverage depth needed for effective error correction
+- Created uneven representation of the genome, with some regions potentially missing entirely
+- Reduced the statistical power needed for detecting and correcting sequencing errors
+- Compromised the ability of assembly tools to resolve repetitive regions
+
+For error correction tools like Herro and DeChat that rely on sufficient read depth and overlap to identify and correct errors, the extreme reduction in data quantity likely made it impossible to perform meaningful corrections. Error correction typically requires 30-50x coverage, but our subsampled data likely fell far below this threshold.

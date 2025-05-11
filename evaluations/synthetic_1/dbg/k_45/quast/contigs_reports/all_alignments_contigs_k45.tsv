@@ -1,0 +1,3 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+1	1040	1	1040	reference_r	contig_1	100.0		True
+CONTIG	contig_1	1040	correct

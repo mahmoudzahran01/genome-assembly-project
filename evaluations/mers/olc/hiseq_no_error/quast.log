@@ -1,0 +1,28 @@
+/ibex/sw/rl9c/quast/5.2.0/rl9_conda3/quast-5.2.0/quast.py -o task1/evaluations/mers_olc_hiseq_no_error -r task1/data/synthetic_2/GCF_000901155.1_ViralProj183710_genomic.fna task1/outputs/mers_olc/hiseq_no_error/contigs_olc_min20.fasta
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-5.14.0-427.20.1.el9_4.0.1.x86_64-x86_64-with-glibc2.17 (linux_64)
+  Python version: 3.8.20
+  CPUs number: 40
+
+Started: 2025-05-09 17:34:05
+
+Logging to /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/evaluations/mers_olc_hiseq_no_error/quast.log
+NOTICE: Maximum number of threads is set to 10 (use --threads option to set it manually)
+
+CWD: /home/zahrmm0b/cs249/cs249_final_assignment_2
+Main parameters: 
+  MODE: default, threads: 10, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Reference:
+  /home/zahrmm0b/cs249/cs249_final_assignment_2/task1/data/synthetic_2/GCF_000901155.1_ViralProj183710_genomic.fna ==> GCF_000901155.1_ViralProj183710_genomic
+
+Contigs:
+  Pre-processing...
+WARNING: Skipping contigs_olc_min20 because it doesn't contain contigs >= 500 bp.
+
+
+ERROR! None of the assembly files contains correct contigs. Please, provide different files or decrease --min-contig threshold.

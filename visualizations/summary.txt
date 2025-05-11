@@ -1,0 +1,12 @@
+=== Visualization Inventory ===
+PDF files: 14
+PNG files: 1
+HTML visualizations: 1
+Task 1 visualizations: 14
+Task 2 visualizations: 1
+
+=== Files by Category ===
+QUAST visualizations: 1
+BUSCO visualizations: 0
+Merqury visualizations: 0
+Mis-assembly visualizations: 0

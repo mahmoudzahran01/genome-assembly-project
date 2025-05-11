@@ -1,0 +1,45 @@
+{
+  "kmers": {
+    "total": 280000,
+    "unique": 996
+  },
+  "graph": {
+    "nodes": 997,
+    "edges": 280000
+  },
+  "assembly": {
+    "num_contigs": 1,
+    "total_length": 1040,
+    "min_length": 1040,
+    "max_length": 1040,
+    "mean_length": 1040.0,
+    "n50": 1040,
+    "n90": 1040,
+    "gc_content": 51.24999999999999
+  },
+  "files": {
+    "contigs": "task1/evaluations/synthetic_1/k_45/contigs_k45.fasta",
+    "graph": "task1/evaluations/synthetic_1/k_45/assembly_graph_k45.gfa"
+  },
+  "alignment": {
+    "scores": [
+      1040.0
+    ],
+    "best_score": 1040.0,
+    "best_alignment": [
+      [
+        [
+          0,
+          1040
+        ]
+      ],
+      [
+        [
+          0,
+          1040
+        ]
+      ]
+    ],
+    "best_contig_idx": 0
+  }
+}

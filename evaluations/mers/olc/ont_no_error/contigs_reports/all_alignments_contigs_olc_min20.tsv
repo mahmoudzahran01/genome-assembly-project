@@ -1,0 +1,3 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+21863	30004	1	8142	NC_019843.3	contig_1	100.0		True
+CONTIG	contig_1	8142	correct

@@ -1,0 +1,156 @@
+Scincus mitranus Genome Assembly Evaluation (Task 2.2)
+=====================================================
+Date: Sat May 10 05:54:31 AM +03 2025
+Job ID: 38742328
+
+Assemblies Evaluated:
+- scincus_mitranus_hic.hic.p_ctg.fasta
+- scincus_mitranus_nanopore.bp.p_ctg.fasta
+- scincus_mitranus.bp.p_ctg.fasta
+
+Primary Assembly for Detailed Evaluation: scincus_mitranus_hic.hic.p_ctg.fasta
+
+1. Basic Assembly Metrics (QUAST)
+=================================
+
+QUAST provides basic statistics about the assembly including size, contiguity (N50), and GC content.
+These metrics help evaluate the overall completeness and fragmentation of the assembly.
+
+Date: Sat May 10 05:48:08 AM +03 2025
+
+All statistics are based on contigs of size >= 1000 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    scincus_mitranus_nanopore.bp.p_ctg  scincus_mitranus.bp.p_ctg
+# contigs (>= 0 bp)         11036                               20859                    
+# contigs (>= 1000 bp)      11036                               20859                    
+# contigs (>= 5000 bp)      11036                               20859                    
+# contigs (>= 10000 bp)     11036                               20859                    
+# contigs (>= 25000 bp)     11025                               20552                    
+# contigs (>= 50000 bp)     10589                               13587                    
+Total length (>= 0 bp)      1145082774                          1549791663               
+Total length (>= 1000 bp)   1145082774                          1549791663               
+Total length (>= 5000 bp)   1145082774                          1549791663               
+Total length (>= 10000 bp)  1145082774                          1549791663               
+Total length (>= 25000 bp)  1144858490                          1542849485               
+Total length (>= 50000 bp)  1125893987                          1271383484               
+# contigs                   11036                               20859                    
+Largest contig              805554                              594987                   
+Total length                1145082774                          1549791663               
+Estimated reference length  1300000000                          1300000000               
+GC (%)                      45.15                               45.30                    
+N50                         108996                              85025                    
+NG50                        100402                              95468                    
+N90                         65621                               41598                    
+NG90                        -                                   56837                    
+auN                         129365.7                            101504.2                 
+auNG                        113949.6                            121008.0                 
+L50                         3569                                6026                     
+LG50                        4310                                4637                     
+L90                         8966                                16290                    
+LG90                        -                                   11686                    
+# N's per 100 kbp           0.00                                0.00                     
+
+2. Gene Completeness Assessment (BUSCO)
+=======================================
+
+BUSCO analysis is still in progress or has not completed.
+This analysis searches for conserved single-copy orthologs in the assembly.
+For reptile genomes, typical BUSCO completeness ranges from 80-95% for the tetrapoda_odb10 dataset.
+
+3. K-mer Analysis and QV Score (Merqury)
+=======================================
+
+Merqury performs k-mer based analysis of the assembly to estimate consensus quality.
+The QV (Quality Value) score represents the log-scaled error probability, with higher values indicating better quality:
+- QV 20 = 99% accuracy (1 error per 100 bases)
+- QV 30 = 99.9% accuracy (1 error per 1,000 bases)
+- QV 40 = 99.99% accuracy (1 error per 10,000 bases)
+- QV 50 = 99.999% accuracy (1 error per 100,000 bases)
+
+Merqury K-mer Analysis and QV Score
+==================================
+Date: Sat May 10 05:54:31 AM +03 2025
+Assembly: scincus_mitranus_hic.hic.p_ctg.fasta
+
+QV Scores:
+scincus_mitranus_hic.hic.p_ctg	867704	1560195200	45.7691	2.64904e-05
+
+4. Mis-assembly Detection
+===========================
+
+Mis-assembly detection identifies structural errors in the assembly by analyzing read alignments.
+Potential issues include collapsed repeats, expansions, inversions, and translocations.
+High mapping rates and uniform coverage suggest good assembly quality.
+
+Basic Mis-assembly Detection
+==========================
+Date: Sat May 10 05:54:31 AM +03 2025
+Assembly: scincus_mitranus_hic.hic.p_ctg.fasta
+
+Basic Alignment Statistics:
+Total alignments: 0
+Mapped alignments: 0
+Unmapped alignments: 0
+Mapping rate: %
+
+Without samtools, detailed analysis is limited. Potential mis-assemblies can include:
+- Collapsed repeats (regions where coverage would be abnormally high)
+- Expansions (regions where coverage would be abnormally low)
+- Inversions (regions where read orientations would conflict)
+- Translocations (reads mapping to unexpected contigs)
+
+A high overall mapping rate (>95%) suggests good assembly quality.
+
+Nanopore Alignment Statistics:
+Total alignments: 0
+Mapped alignments: 0
+Mapping rate: %
+Nanopore long reads are particularly useful for identifying structural variants and mis-assemblies.
+
+5. Interpretation and Recommendations
+===================================
+
+Based on the evaluation metrics obtained, we can draw the following conclusions about the Scincus mitranus assembly:
+
+1. Assembly Size and Contiguity:
+   - The assembly size is are bp (~a.re Gb), which is slightly larger than the estimated genome size of 1.3 Gb.
+   - This suggests potential duplicate regions or unresolved heterozygosity.
+   - The N50 value of 108996 bp indicates moderate contiguity.
+   - For a vertebrate genome, this N50 is relatively low. High-quality vertebrate assemblies typically achieve N50 values >1 Mb.
+   
+2. Fragmentation Analysis:
+   - With are contigs and an L50 of 3569, the assembly is quite fragmented.
+   - For comparison, chromosome-level assemblies typically have fewer than 100 scaffolds.
+   - The large number of contigs suggests many unresolved repetitive regions.
+   
+3. Sequence Content:
+   - The GC content of (%)% is within the typical range for reptile genomes (usually 40-45%).
+   
+Potential Improvements:
+1. Increase Contiguity:
+   - Incorporate more ultra-long reads (>100 kb) from Oxford Nanopore to span repetitive regions
+   - Use additional Hi-C data with improved proximity ligation methods
+   - Consider chromosome flow-sorting to assemble chromosomes independently
+
+2. Reduce Redundancy:
+   - The assembly size is larger than expected, suggesting duplicate regions
+   - Use purge_haplotigs or purge_dups to remove redundant sequences
+   - Consider haplotype-aware assembly approaches like HiCanu or Verkko
+
+3. Improve Base-Level Accuracy:
+   - Add Illumina short-read data for consensus polishing with Pilon
+   - Use newer versions of assembly polishing tools like POLCA
+   - Consider accuracy assessment with independent technologies
+
+4. Address Specific Issues:
+   - Target regions with abnormal coverage for manual curation
+   - Verify the most problematic contigs with independent sequencing
+   - Compare to closely related species genomes as a reference
+
+Next Steps:
+1. Scaffolding the current assembly with additional Hi-C data
+2. Polishing the assembly with additional short-read data
+3. Manual curation of problematic regions identified in mis-assembly detection
+4. Chromosome assignment and orientation based on related species
+
+This assembly represents a solid foundation but requires additional improvements to reach reference quality. With the current technologies available, a chromosome-level assembly with higher contiguity should be achievable.
