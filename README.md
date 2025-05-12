@@ -1,3 +1,5 @@
+I'll update the README to include Task 2.4 for genome annotation. Here's the complete updated README with the new section:
+
 # Genome Assembly Project
 
 This repository contains implementations of genome assembly algorithms and comprehensive analysis pipelines for both simulated datasets and the *Scincus mitranus* (sandfish lizard) genome.
@@ -15,6 +17,7 @@ This project addresses two main components of genome assembly:
    - Assembly using Hifiasm with multiple sequencing technologies
    - Comprehensive evaluation of assembly quality
    - Assembly improvement through read preprocessing and error correction
+   - Genome annotation using RNA-Seq data and computational prediction
 
 ## Repository Structure
 
@@ -28,7 +31,8 @@ This project addresses two main components of genome assembly:
 ├── task2/                      # Task 2 scripts
 │   ├── process_all_datasets.sh # Task 2.1: Data processing and assembly
 │   ├── final_task2_2.sh        # Task 2.2: Assembly evaluation
-│   └── task2_3_assembly_improvement_subsampled.sh # Task 2.3: Assembly improvement
+│   ├── task2_3_assembly_improvement_subsampled.sh # Task 2.3: Assembly improvement
+│   └── lizard_annotation_pipeline.sh # Task 2.4: Genome annotation
 └── [additional directories for data, results, etc.]
 ```
 
@@ -57,6 +61,12 @@ This project addresses two main components of genome assembly:
   - seqtk
 - **Visualization:**
   - Bandage
+- **Annotation Tools:**
+  - BRAKER
+  - CD-HIT
+  - InterProScan
+  - BLAST
+  - seqkit
 
 ## Task 1: Fundamental Assembly Algorithms
 
@@ -187,6 +197,49 @@ sbatch task2/task2_3_assembly_improvement_subsampled.sh
 - 32 CPUs, 64GB memory, 24-hour runtime
 - Requires multiple bioinformatics tools (FastQC, Kraken2, Trimmomatic, etc.)
 
+### Task 2.4: Genome Annotation (lizard_annotation_pipeline.sh)
+
+This script performs comprehensive genome annotation of the *Scincus mitranus* assembly using RNA-Seq data:
+
+```bash
+sbatch task2/lizard_annotation_pipeline.sh
+```
+
+**What the script does:**
+1. **IsoSeq Data Processing and Quality Control:**
+   - Analyzes RNA-Seq data from eye and liver tissues using seqkit
+   - Detects potential contamination with Kraken2
+   - Checks for transcript completeness (poly-A tails)
+   - Clusters isoforms using CD-HIT
+   - Aligns transcripts to the genome with minimap2
+   - Identifies potential chimeric alignments
+
+2. **Gene Prediction with BRAKER:**
+   - Merges RNA-Seq alignments from both tissues
+   - Performs soft-masking of the genome for repeat regions
+   - Applies BRAKER pipeline for gene prediction using IsoSeq evidence
+   - Processes and extracts predicted gene models and protein sequences
+
+3. **Functional Annotation:**
+   - Performs BLASTP against UniProt SwissProt database for homology-based annotation
+   - Applies InterProScan for domain and functional motif prediction
+   - Assigns Gene Ontology (GO) terms based on InterProScan results
+
+4. **Report Generation:**
+   - Creates comprehensive reports for each annotation step
+   - Generates a final annotation report with integrated results
+   - Organizes output files in a structured directory format
+
+**Resource requirements:**
+- 48 CPUs, 256GB memory, 72-hour runtime
+- Requires specialized annotation tools (BRAKER, BLAST, InterProScan, etc.)
+
+**Key outputs:**
+- Gene predictions in GFF3 format
+- Protein sequences in FASTA format
+- Functional annotations with GO terms and domain information
+- Comprehensive reports on tissue-specific transcriptomes
+
 ## Key Outputs
 
 ### Task 1 Outputs
@@ -204,6 +257,10 @@ sbatch task2/task2_3_assembly_improvement_subsampled.sh
 - `evaluation/mis_assembly/`: Analysis of potential misassemblies
 - `improved/improved_assembly.fasta`: Final improved assembly
 - `report/assembly_evaluation_report.txt`: Comprehensive evaluation report
+- `annotation/scincus_mitranus_genes.gff3`: Gene predictions
+- `annotation/scincus_mitranus_proteins.faa`: Protein sequences
+- `annotation/functional/`: Functional annotation results
+- `report/annotation/final_annotation_report.txt`: Genome annotation report
 
 ## Interpretation of Key Results
 
@@ -219,6 +276,7 @@ sbatch task2/task2_3_assembly_improvement_subsampled.sh
 - The OLC assembler handles long reads with errors more effectively
 - The integrated approach (PacBio+Nanopore+Hi-C) produces the most contiguous assembly
 - Assembly improvement techniques increase QV scores by reducing error rates
+- Annotation with IsoSeq RNA data improves gene model accuracy, especially for splice variants
 
 ## Advanced Usage Notes
 
@@ -230,10 +288,12 @@ sbatch task2/task2_3_assembly_improvement_subsampled.sh
 ### Memory Considerations
 - For full-sized datasets, increase memory allocation (192GB+ recommended)
 - When processing the complete *Scincus mitranus* dataset, increase runtime to 48+ hours
+- Annotation with BRAKER and InterProScan requires significant memory (256GB recommended)
 
 ### Output Visualization
 - GFA files can be directly loaded into Bandage for visualization
 - Use the `make_gfa.py` script to convert contig layouts to GFA format
+- Gene annotations can be visualized with genome browsers like IGV or JBrowse
 
 ## Acknowledgments
 
